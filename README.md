@@ -66,6 +66,10 @@ grub_timeout: 5
 
 grub_recordfail_timeout: "{{ grub_timeout }}"
 
+# Use predefined vars
+grub_packages: "{{ _grub_packages[ansible_os_family] | default(_grub_packages['default']) }}"
+grub_update_grub_command: "{{ _grub_update_grub_command[ansible_os_family] | default(_grub_update_grub_command['default']) }}"
+
 # Add options here, for example:
 # grub_options:
 #   - option: cgroup_enable
