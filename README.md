@@ -70,6 +70,9 @@ grub_recordfail_timeout: "{{ grub_timeout }}"
 grub_packages: "{{ _grub_packages[ansible_os_family] | default(_grub_packages['default']) }}"
 grub_update_grub_command: "{{ _grub_update_grub_command[ansible_os_family] | default(_grub_update_grub_command['default']) }}"
 
+# Define if the host must reboot on change
+grub_reboot_on_change: true
+
 # Add options here, for example:
 # grub_options:
 #   - option: cgroup_enable
