@@ -66,6 +66,9 @@ grub_timeout: 5
 
 grub_recordfail_timeout: "{{ grub_timeout }}"
 
+# Define if the host must reboot on change
+grub_reboot_on_change: true
+
 # Add options here, for example:
 # grub_options:
 #   - option: cgroup_enable

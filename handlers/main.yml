@@ -11,3 +11,4 @@
 
 - name: Reboot
   ansible.builtin.reboot:
+  when: grub_reboot_on_change
